@@ -28,7 +28,7 @@ A Java-first development skill that guides developers through a structured, step
 
 **Java 25 features are always active.** The following are activated conditionally based on the project:
 - **Quarkus** — when `io.quarkus` is found in `pom.xml` / `build.gradle`
-- **JBang** — when `///` directives are found in `.java` files or `jbang-catalog.json` exists
+- **JBang** — when `//DEPS` directives are found in `.java` files or `jbang-catalog.json` exists
 - **LangChain4j** — when `dev.langchain4j` or `quarkus-langchain4j` is found in dependencies
 
 ## When to Use
@@ -58,6 +58,7 @@ Key features to prefer when writing code:
 - **Text blocks** for multiline strings
 - **Module Import Declarations** (JEP 511), **Compact Source Files** (JEP 512), **Flexible Constructor Bodies** (JEP 513)
 - **Structured Concurrency** (JEP 505), **Scoped Values** (JEP 506)
+- **Markdown Documentation Comments** (JEP 467): use `///` instead of `/** */` for Javadoc
 - `var`, `Optional`, `Stream` API, `java.time` — see reference for full rules
 
 #### Conditional: Quarkus
@@ -70,11 +71,11 @@ Core rules: CDI-first, Quarkus REST (not legacy RESTEasy), Panache for data acce
 
 #### Conditional: JBang
 
-> Activated when `///` directives or `jbang-catalog.json` are detected.
+> Activated when `//DEPS` directives or `jbang-catalog.json` are detected.
 
 See `references/jbang-guide.md` for the full guide.
 
-Core rules: `///` directives for deps and Java version, compact source files, single-responsibility scripts.
+Core rules: `//DEPS` / `//JAVA` directives for deps and Java version, compact source files, single-responsibility scripts.
 
 #### Conditional: LangChain4j
 
@@ -95,7 +96,7 @@ Before asking questions, auto-detect the project's technology stack:
 1. Check for `pom.xml` or `build.gradle` / `build.gradle.kts` — determine build tool
 2. Check dependencies for `io.quarkus` — if found, activate **Quarkus** context
 3. Check dependencies for `dev.langchain4j` or `quarkus-langchain4j` — if found, activate **LangChain4j** context
-4. Check for `///` directives in `.java` files or `jbang-catalog.json` — if found, activate **JBang** context
+4. Check for `//DEPS` directives in `.java` files or `jbang-catalog.json` — if found, activate **JBang** context
 5. If no build file is found, ask the user: is this a JBang script, a new Maven/Gradle project, or something else?
 
 If auto-detection is inconclusive, ask the user explicitly:

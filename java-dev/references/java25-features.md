@@ -165,6 +165,36 @@ DatabaseConnection getConnection() {
 
 > Docs: https://openjdk.org/jeps/502
 
+### Markdown Documentation Comments (JEP 467)
+Use `///` for Javadoc comments with Markdown syntax instead of the traditional `/** */` with HTML/`@tag` syntax. Prefer this style for all new documentation.
+
+```java
+/// Returns the product with the given **id**.
+///
+/// If no product is found, returns an empty `Optional`.
+///
+/// ## Example
+///
+/// ```java
+/// Optional<Product> product = repository.findById(42L);
+/// ```
+///
+/// @param id the product identifier
+/// @return the product, or empty if not found
+public Optional<Product> findById(Long id) {
+    // ...
+}
+```
+
+**Rules:**
+- Prefer `///` over `/** */` for all new Javadoc
+- Use Markdown formatting: `**bold**`, `` `code` ``, `## headings`, ``` ```code blocks``` ```
+- `@param`, `@return`, `@throws` tags still work inside `///` comments
+- Each line of the doc comment starts with `///` followed by a space
+- Blank doc lines are `///` with nothing after
+
+> Docs: https://openjdk.org/jeps/467
+
 ## General Java Rules (Always Active)
 
 - Use **`var`** for local variables when the type is obvious from context
@@ -175,4 +205,4 @@ DatabaseConnection getConnection() {
 - Use **`String.formatted()`** or **`"""` text blocks** over `String.format()` concatenation
 - Follow standard **naming conventions**: `PascalCase` for classes, `camelCase` for methods/variables, `SCREAMING_SNAKE_CASE` for constants
 - Organize imports: `java.*`, then `jakarta.*`, then third-party, then project — no wildcard imports
-- Write **Javadoc** for all public APIs
+- Write **Javadoc** for all public APIs using `///` Markdown Documentation Comments (JEP 467)

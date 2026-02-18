@@ -1,6 +1,6 @@
 # JBang Guide Reference
 
-> Activate this reference when the project uses JBang (detected via `///` directives in `.java` files, `jbang-catalog.json`, or user request).
+> Activate this reference when the project uses JBang (detected via `//DEPS` directives in `.java` files, `jbang-catalog.json`, or user request).
 > Documentation: https://www.jbang.dev/documentation/guide/latest/
 
 ## What is JBang?
