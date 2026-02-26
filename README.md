@@ -3,7 +3,7 @@
 ## [methodical-dev](./methodical-dev/)
 
  - 👤 Authors: [@k33gorg](https://bsky.app/profile/k33gorg.bsky.social)
- - Source: https://codeberg.org/ai-skills/methodical-dev
+ - 📜 Source reference: https://codeberg.org/ai-skills/methodical-dev
 
 The methodical-dev skill enforces a structured, step-by-step development workflow with five phases:
 
@@ -17,7 +17,7 @@ The methodical-dev skill enforces a structured, step-by-step development workflo
 
 ## [java-dev](./java-dev/)
 
- - Authors: [@k33gorg](https://bsky.app/profile/k33gorg.bsky.social) (inspiration), @wilsagsx (main author)
+ - 👤 Authors: [@wildagsx](https://bsky.app/profile/wilda.bsky.social) inspired by [@k33gorg](https://bsky.app/profile/k33gorg.bsky.social)
 
 A **Java-first** development skill that extends the methodical-dev workflow for modern Java 25 projects. It auto-detects (or asks about) the project's technology stack and activates framework-specific guidance conditionally:
 
