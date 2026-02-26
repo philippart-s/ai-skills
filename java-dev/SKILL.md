@@ -350,6 +350,7 @@ Once all steps are completed:
 - Add dependencies/extensions without asking the user
 - Use `ThreadLocal` when `ScopedValue` is appropriate
 - Ignore existing project patterns and conventions
+- Access to critique files like .env files, never read them just ask the user to check them and provide necessary values
 
 **If Quarkus is active, also never:**
 - Use RESTEasy Classic when Quarkus REST is available

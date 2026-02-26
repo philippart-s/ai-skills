@@ -142,6 +142,7 @@ Once all steps are completed:
 - ❌ Continue if the user has not validated the previous step
 - ❌ Take shortcuts "to simplify"
 - ❌ Implement differently than requested
+- ❌ Access to critique files like .env files, never read them just ask the user to check them and provide necessary values
 
 **You MUST ALWAYS:**
 - ✅ Stop after each step for validation

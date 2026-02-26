@@ -2,7 +2,7 @@
 
 ## [methodical-dev](./methodical-dev/)
 
- - Authors: [@k33gorg](https://bsky.app/profile/k33gorg.bsky.social)
+ - 👤 Authors: [@k33gorg](https://bsky.app/profile/k33gorg.bsky.social)
  - Source: https://codeberg.org/ai-skills/methodical-dev
 
 The methodical-dev skill enforces a structured, step-by-step development workflow with five phases:
